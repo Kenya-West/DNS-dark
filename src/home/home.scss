@@ -152,4 +152,23 @@ body {
             color: $accent-color--light;
         }
     }
+
+    .ui-widget-content {
+        @include general();
+        box-shadow: none;
+
+        >li.ui-autocomplete-group-title,
+        >li.ui-menu-item {
+            @include general();
+        }
+
+        a {
+            color: $accent-color--light;
+        }
+
+        .ui-menu-item a mark {
+            background: $accent-color--dark;
+            color: $font-color;
+        }
+    }
 }
