@@ -1,0 +1,28 @@
+@mixin general() {
+    background-color: $bg-color;
+    color: $font-color;
+    border: $border;
+}
+
+@mixin product() {
+    background-color: $accent-color--dark;
+    color: $font-color;
+    border: $border;
+}
+
+@mixin input() {
+    background-color: $accent-color--dark;
+    color: $font-color;
+    border: solid 3px lighten($accent-color--dark, 10%);
+}
+
+@mixin opacity() {
+    opacity: 0.5;
+
+    transition: opacity ease-in 0.1s;
+
+    &:hover {
+        opacity: 1;
+
+    }
+}
