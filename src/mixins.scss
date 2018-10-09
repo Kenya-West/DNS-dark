@@ -16,6 +16,27 @@
     border: solid 3px lighten($accent-color--dark, 10%);
 }
 
+@mixin button-main() {
+    background-color: $accent-color--dark;
+    color: $font-color;
+    border: $border;
+
+    &:hover {
+        background-color: lighten($accent-color--dark, 10%);
+    }
+}
+
+@mixin button-secondary() {
+    background-color: $bg-color;
+    color: $accent-color--light;
+    border: solid 3px $accent-color--dark;
+
+    &:hover {
+        color: $font-color;
+        border-color: lighten($accent-color--dark, 10%);
+    }
+}
+
 @mixin opacity() {
     opacity: 0.5;
 
