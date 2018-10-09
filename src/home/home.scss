@@ -13,18 +13,18 @@ body {
             background-color: $accent-color--dark !important;
         }
 
-        #header-search .search-form .input-group>INPUT,
-        #header-search .search-form .input-group .btn {
-            background-color: $bg-color !important;
-            color: $font-color !important;
-            border: solid 3px lighten($accent-color--dark, 10%) !important;
+        .main-search-form__input,
+        .main-search-form__button {
+            background-color: $bg-color;
+            color: $font-color;
+            border: solid 3px lighten($accent-color--dark, 10%);
 
             &:hover {
-                background-color: lighten($accent-color--dark, 10%) !important;
+                background-color: lighten($accent-color--dark, 10%);
             }
         }
 
-        #header-search .search-form .input-group .btn:before {
+        .main-search-form__button:before {
             display: none;
         }
 
@@ -99,11 +99,16 @@ body {
             #homepage-review-slider-wrap .reviews-slider {
                 @include general();
             }
+        }
 
-            .main-slider-wrap,
-            .product-info img {
-                @include opacity();
-            }
+        // Darken pictures in the container
+
+        .main-slider-wrap,
+        .product-info img,
+        .tns-item>a>picture,
+        .banner img,
+        .post img {
+            @include opacity();
         }
     }
 
