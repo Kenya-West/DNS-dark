@@ -104,5 +104,26 @@
         .feedback-widget_blue {
             background: none;
         }
+
+        .price-buttons-item .btn-one-click {
+            @include button-main();
+        }
+
+        .price-buttons-item .btn-cart {
+            @include button-secondary();
+        }
+
+        .survey-button-widget__survey-btn {
+            @include button-secondary();
+        }
+
+        .viewed-products-widget .btn-cart {
+            background-color: $bg-color !important;
+            @include button-secondary();
+        }
+    }
+
+    #subscription-widget .btn[type="submit"] {
+        @include button-secondary();
     }
 }
