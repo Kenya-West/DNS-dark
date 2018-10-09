@@ -1,0 +1,108 @@
+.container {
+    #menu-catalog {
+        li {
+            @include general();
+
+            a {
+                color: $font-color;
+            }
+
+            .sub-wrap {
+                @include general();
+
+                .catalog-subcatalog>li>.item-wrap a {
+                    color: $font-color;
+                }
+
+                .catalog-subcatalog.level-3,
+                .catalog-subcatalog.level-3::before,
+                .catalog-subcatalog.level-3::after {
+                    @include general();
+                }
+
+                .catalog-subcatalog.level-1,
+                .catalog-subcatalog.level-1::before,
+                .catalog-subcatalog.level-1::after {
+                    @include general();
+                }
+
+            }
+        }
+    }
+
+    main {
+        /*Product preview images*/
+
+        .item-header .col-header.col-photo .thumb-slider-wrap .owl-item .thumb {
+            border: $border;
+        }
+
+        /*Tabs of product*/
+        .nav-tabs>li.active>a,
+        .nav-tabs>li.active>a:focus,
+        .nav-tabs>li.active>a:hover {
+            @include general();
+        }
+
+        .nav-tabs>LI.active,
+        .nav-tabs>LI.active:hover,
+        .nav-tabs>LI.active:focus,
+        .nav-tabs.nav-justified>LI.active,
+        .nav-tabs.nav-justified>LI.active:hover,
+        .nav-tabs.nav-justified>LI.active:focus {
+            @include general();
+        }
+
+        .nav-tabs>LI,
+        .nav-tabs.nav-justified>LI {
+            @include general();
+        }
+
+        .nav>li>a:focus,
+        .nav>li>a:hover {
+            background-color: $accent-color--dark;
+            color: $font-color;
+        }
+
+        /*Survey*/
+        .survey-button-widget {
+            @include general();
+        }
+
+        /*Table of contents*/
+
+        .item-tabs .node-block .price-tab-content#description .options-group .table-params,
+        .item-tabs .node-block .price-tab-content#characteristics .options-group .table-params {
+            @include general();
+        }
+
+        .opinions-block .opinions-header .container-title {
+            color: $accent-color--light;
+        }
+
+        .opinions-block .top-opinion-wrapper .top-opinion-container {
+            background: $accent-color--dark;
+        }
+
+        .opinions-block .top-opinion-container .opinion-item .opinion-body .opinion-content .descriptions,
+        .opinions-block .opinions-list .opinion-item .opinion-body .opinion-content .descriptions {
+            color: $font-color;
+        }
+
+        .opinions-block .rate-container .radio-container div .content {
+            color: $font-color;
+        }
+
+        .opinions-block .rate-container .radio-container div {
+            @include general();
+        }
+
+        .table-params>tbody>tr>td>.dots>span {
+            background: none;
+        }
+
+        .feedback-widget_blue {
+            background: none;
+        }
+    }
+}
