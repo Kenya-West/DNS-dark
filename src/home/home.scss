@@ -1,0 +1,150 @@
+body {
+    @include general();
+
+    header {
+        @include general();
+
+        .navbar-nav>li>A,
+        .navbar-nav>li>.item {
+            color: $accent-color--light;
+        }
+
+        .header-bottom {
+            background-color: $accent-color--dark !important;
+        }
+
+        #header-search .search-form .input-group>INPUT,
+        #header-search .search-form .input-group .btn {
+            background-color: $bg-color !important;
+            color: $font-color !important;
+            border: solid 3px lighten($accent-color--dark, 10%) !important;
+
+            &:hover {
+                background-color: lighten($accent-color--dark, 10%) !important;
+            }
+        }
+
+        #header-search .search-form .input-group .btn:before {
+            display: none;
+        }
+
+        .container {}
+    }
+
+    .container {
+        aside {
+            .catalog li {
+                @include general();
+            }
+
+            .catalog li a {
+                color: $font-color;
+            }
+
+            .catalog li>.sub-wrap {
+                @include general();
+
+                .catalog-subcatalog>li>.item-wrap a {
+                    color: $font-color;
+                }
+            }
+
+            .catalog li>.sub-wrap .catalog-subcatalog.level-3,
+            .catalog li>.sub-wrap .catalog-subcatalog.level-3::before,
+            .catalog li>.sub-wrap .catalog-subcatalog.level-3::after {
+                @include general();
+            }
+
+            .catalog:hover>li>a::before {
+                box-shadow: none;
+            }
+
+            .news-widget {
+                @include general();
+            }
+        }
+
+        main {
+            .catalog-products .product {
+                @include product();
+
+                .product-info .title a {
+                    color: $font-color;
+                }
+
+                .product-info .title .full-name {
+                    background: none;
+                }
+
+                .price .price_g {
+                    color: $accent-color--light;
+                }
+
+                .product-buttons .btn-one-click {
+                    background-color: lighten($accent-color--dark, 10%);
+                    color: $font-color;
+                    border: $border;
+
+                    &:hover {
+                        background-color: lighten($accent-color--dark, 15%);
+                    }
+                }
+            }
+
+            #homepage-review-slider-wrap .reviews-slider .review-slide {
+                @include general();
+            }
+
+            .node-block,
+            #homepage-review-slider-wrap .reviews-slider {
+                @include general();
+            }
+
+            .main-slider-wrap,
+            .product-info img {
+                @include opacity();
+            }
+        }
+    }
+
+    /*Common controls*/
+    .btn-default {
+        background-color: $accent-color--dark;
+        color: $accent-color--light;
+        border: $border;
+
+        &:hover {
+            background-color: lighten($accent-color--dark, 15%);
+        }
+    }
+
+    .btn.btn-compare,
+    .btn.btn-wishlist {
+        background-color: lighten($accent-color--dark, 10%);
+        color: $font-color;
+        border: $border;
+
+        &:hover {
+            background-color: lighten($accent-color--dark, 15%);
+        }
+    }
+
+    .form-control {
+        @include input();
+    }
+
+    .w-product-voblers,
+    .w-review-voblers {
+        opacity: 0.5;
+    }
+
+    /*FOOTER*/
+    FOOTER {
+        background-color: $bg-color;
+        color: $font-color;
+
+        A {
+            color: $accent-color--light;
+        }
+    }
+}
