@@ -1,0 +1,13 @@
+body {
+    .container {
+        aside {}
+
+        main {
+            .catalog-products {
+                .price-buttons-catalog .btn-cart {
+                    @include button-secondary();
+                }
+            }
+        }
+    }
+}
