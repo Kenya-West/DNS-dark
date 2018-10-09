@@ -11,6 +11,27 @@ body {
 
         .header-bottom {
             background-color: $accent-color--dark !important;
+
+            .btn-cart-link.empty {
+                background-color: $accent-color--dark !important;
+                box-shadow: none !important;
+                color: $font-color !important;
+                border: $border !important;
+
+                &:hover {
+                    background-color: lighten($accent-color--dark, 10%) !important;
+                }
+            }
+
+            .btn-cart-link.empty {
+                background-color: $bg-color !important;
+                color: $font-color !important;
+                border: $border !important;
+
+                &:hover {
+                    background-color: lighten($accent-color--dark, 10%) !important;
+                }
+            }
         }
 
         .main-search-form__input,
