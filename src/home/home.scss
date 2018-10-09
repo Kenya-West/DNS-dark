@@ -145,7 +145,8 @@ body {
     }
 
     .btn.btn-compare,
-    .btn.btn-wishlist {
+    .btn.btn-wishlist,
+    .btn.btn-trash {
         background-color: lighten($accent-color--dark, 10%);
         color: $font-color;
         border: $border;
