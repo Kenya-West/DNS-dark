@@ -7,8 +7,6 @@ dns-shop.ru
 */
 
 @import "colors";
-
-/* Append colors after they are imported */
-body {
-    background: $bg-color;
-}
+@import "mixins";
+@import "home/home";
+@import "product";
