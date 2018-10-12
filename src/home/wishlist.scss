@@ -1,0 +1,17 @@
+body {
+    .container.userpage {
+        @include general();
+
+        .single-wishlist {
+            @include general();
+
+            .body {
+                border: $border;
+            }
+        }
+
+        .wishlist-info {
+            border: $border;
+        }
+    }
+}
