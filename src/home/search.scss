@@ -8,6 +8,137 @@ body {
                     @include button-secondary();
                 }
             }
+
+            .breadcrumb {
+                background-color: $bg-color;
+
+                a {
+                    color: $font-color;
+                }
+            }
+
+            .filter-side {
+                .filters-container .mobile-crumbs {
+                    @include general();
+                }
+
+                .filter-list {
+                    @include general();
+
+                    .filter-block {
+                        @include general();
+                    }
+
+                    .filter-block>LABEL>A,
+                    .filter-block>LABEL>A,
+                    .filter-block .filter-block-items .checkbox-list input+label {
+                        color: $accent-color--light;
+                    }
+
+                    .radio input[type="radio"]+label span.filter-block-item-name {
+                        color: $accent-color--light;
+                    }
+                }
+            }
+
+            .catalog-filters .filter-controls .filter .filter-block-items:not(.has-collapse-button):before,
+            .catalog-filters .filter-controls .filter-block:not(.filter-block-compatible-products) .filter-block-items:not(.has-collapse-button):before,
+            .catalog-filters .filter-list .filter .filter-block-items:not(.has-collapse-button):before,
+            .catalog-filters .filter-list .filter-block:not(.filter-block-compatible-products) .filter-block-items:not(.has-collapse-button):before,
+            .catalog-filters .filter-controls .filter .filter-block-items:not(.has-collapse-button):after,
+            .catalog-filters .filter-controls .filter-block:not(.filter-block-compatible-products) .filter-block-items:not(.has-collapse-button):after,
+            .catalog-filters .filter-list .filter .filter-block-items:not(.has-collapse-button):after,
+            .catalog-filters .filter-list .filter-block:not(.filter-block-compatible-products) .filter-block-items:not(.has-collapse-button):after {
+                display: none;
+            }
+
+            .filter-list .filter-block .filter-block-items .search-block input[data-role="filter-items-search"] {
+                @include input();
+            }
+
+            .catalog-filters .apply-filters-box {
+                @include general();
+            }
+
+            .btn-additional,
+            .btn.drop-filters:hover,
+            .btn.drop-filters:active,
+            .btn.btn-compare:hover,
+            .btn.btn-compare:active,
+            .btn.btn-wishlist:hover,
+            .btn.btn-wishlist:active,
+            .btn.btn-trash:hover,
+            .btn.btn-trash:active,
+            .btn.btn-cart,
+            .btn.btn-wishlist-modal-login {
+                @include button-main();
+            }
+
+            .btn.drop-filters {
+                @include button-secondary();
+            }
+
+            .desktop-controls-container .sort-filter {
+                @include general();
+            }
+
+            .filter-list {
+                background-color: $bg-color;
+            }
+
+            .offer-representation-in-category .item-block.is-active {
+                background-color: transparent;
+            }
+
+            .offer-representation-in-category .item-block,
+            .offer-representation-in-category .item-block a:link {
+                background-color: transparent;
+                color: $accent-color--light;
+            }
+
+            .active-filter .clear-filter {
+                background-color: $accent-color--dark;
+                color: $accent-color--light;
+                border: $border;
+            }
+
+            .catalog-items-list .item {
+                @include product();
+
+                .title>a>h3 {
+                    color: $font-color;
+                }
+
+                .product-price .price_g>span {
+                    color: $accent-color--light;
+                }
+            }
+
+            #catalog-items-page .catalog-items-more a {
+                color: $font-color;
+
+                &:hover {
+                    background-color: lighten($accent-color--dark, 10%);
+                }
+            }
+
+            .page-products .pagination-container .pagination .item {
+                @include general();
+                background-color: $accent-color--dark;
+
+                &:hover {
+                    background-color: lighten($accent-color--dark, 10%);
+                    border: $border;
+                }
+            }
+
+            .page-products .helpers li {
+                background-color: $bg-color;
+            }
+
+            .catalog-products.view-tile.small-tile .product .product-info .title .full-name {
+                background-color: $accent-color--dark;
+            }
         }
     }
 }
