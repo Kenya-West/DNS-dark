@@ -1,0 +1,25 @@
+body {
+
+    .container {
+        .compare-not-product {
+            @include general();
+        }
+
+        .catalog-products .product {
+            @include product();
+        }
+
+        .title>a>h3 {
+            color: $font-color;
+        }
+
+        .catalog-products.view-tile.small-tile .product .product-info .title .full-name {
+            background-color: $accent-color--dark;
+            color: $accent-color--light;
+        }
+
+        .catalog-products .product .product-info .title a {
+            color: $font-color;
+        }
+    }
+}
