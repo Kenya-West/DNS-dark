@@ -2,7 +2,7 @@
 ## Description
 A css file for [Stylus](https://github.com/openstyles/stylus#releases) to make DNS forums dark and friendly for your eyes
 ## How to install
-Just install [Stylus](https://github.com/openstyles/stylus#releases) add-on to your browser and go to [DNS-dark page](https://userstyles.org/styles/136548 "DNS-dark on UserStyles.org").
+Just install [Stylus](https://github.com/openstyles/stylus#releases) add-on to your browser and go to [DNS-dark page](https://userstyles.org/styles/165012/dns-dark "DNS-dark on UserStyles.org").
 ## How to contribute
 clone the repo, then:
 
