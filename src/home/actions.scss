@@ -1,0 +1,9 @@
+body {
+    .container {
+        main {
+            #action-page .content {
+                @include general();
+            }
+        }
+    }
+}
