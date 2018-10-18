@@ -9,6 +9,18 @@ body {
                 }
             }
 
+            .catalog-product .product-buttons .btn-one-click {
+                background: $accent-color--dark;
+                color: $accent-color--light;
+                border: 3px solid lighten($accent-color--dark, 10%);
+
+                &:hover {
+                    background: lighten($accent-color--dark, 10%);
+                    color: $font-color;
+                    border: 3px solid lighten($accent-color--dark, 20%);
+                }
+            }
+
             .breadcrumb {
                 background-color: $bg-color;
 
@@ -138,6 +150,42 @@ body {
 
             .catalog-products.view-tile.small-tile .product .product-info .title .full-name {
                 background-color: $accent-color--dark;
+            }
+
+            .category-item-desktop {
+                @include general();
+                background: $accent-color--dark;
+
+                .about {
+                    color: $accent-color--light;
+                }
+            }
+
+            .dropdown-menu {
+                @include product();
+
+                >li>a {
+                    color: $accent-color--light;
+
+                    &:focus,
+                    &:hover {
+                        background-color: lighten($accent-color--dark, 10%);
+                    }
+                }
+
+                >.disabled>a,
+                >.disabled>a:focus,
+                >.disabled>a:hover {
+                    color: $font-color;
+                    background-color: lighten($accent-color--dark, 20%);
+                }
+
+                >ul:after,
+                &:after {
+                    border-color: transparent transparent $accent-color--dark !important;
+                }
+
+                border-top: $border !important;
             }
         }
     }
