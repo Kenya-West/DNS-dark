@@ -97,6 +97,22 @@
             @include general();
         }
 
+        .opinions-block .rate-container .overall-rate.with-opinions .rate-diagram-container .rate-diagram {
+            color: $font-color;
+        }
+
+        .opinions-block .top-opinion-container .opinion-item.with-spoiler:after,
+        .opinions-block .opinions-list .opinion-item.with-spoiler:after {
+            box-shadow: 0 0 65px 70px $accent-color--dark;
+        }
+
+        .opinions-block .top-opinion-container .container-title,
+        .opinions-block .opinions-list .container-title,
+        .opinions-block .top-opinion-container .opinion-item,
+        .opinions-block .opinions-list .opinion-item {
+            border: $border;
+        }
+
         .table-params>tbody>tr>td>.dots>span {
             background: none;
         }
