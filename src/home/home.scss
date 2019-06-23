@@ -4,11 +4,25 @@ body {
     header {
         @include general();
 
-        .navbar-nav>li>A,
-        .navbar-nav>li>.item {
+        .navbar-nav > li > a,
+        .navbar-nav > li > .item {
             color: $accent-color--light;
         }
 
+        .header-top {
+            @include general();
+
+            .header-top-menu__common-child-list,
+            .popover-block,
+            .popover-block_show {
+                @include general();
+
+                .header-top-menu__common-link_child,
+                .ui-link {
+                    color: $font-color;
+                }
+            }
+        }
         .header-bottom {
             background-color: $accent-color--dark !important;
 
@@ -32,24 +46,38 @@ body {
                     background-color: lighten($accent-color--dark, 10%) !important;
                 }
             }
-        }
 
-        .main-search-form__input,
-        .main-search-form__button {
-            background-color: $bg-color;
-            color: $font-color;
-            border: solid 3px lighten($accent-color--dark, 10%);
-
-            &:hover {
-                background-color: lighten($accent-color--dark, 10%);
+            .buttons a.empty,
+            .buttons a {
+                color: $accent-color--light;
             }
         }
+
+        // .main-search-form__input,
+        // .main-search-form__container,
+        // .main-search-form__button {
+        //     background-color: $bg-color;
+        //     color: $font-color;
+        //     border: solid 3px lighten($accent-color--dark, 10%);
+
+        //     &:hover {
+        //         background-color: lighten($accent-color--dark, 10%);
+        //     }
+
+        //     .ui-input-search__icon {
+        //         background: none;
+        //     }
+        //     .ui-input-search {
+        //         border: none;
+        //     }
+        // }
 
         .main-search-form__button:before {
             display: none;
         }
 
-        .container {}
+        .container {
+        }
     }
 
     .container {
@@ -62,21 +90,21 @@ body {
                 color: $font-color;
             }
 
-            .catalog li>.sub-wrap {
+            .catalog li > .sub-wrap {
                 @include general();
 
-                .catalog-subcatalog>li>.item-wrap a {
+                .catalog-subcatalog > li > .item-wrap a {
                     color: $font-color;
                 }
             }
 
-            .catalog li>.sub-wrap .catalog-subcatalog.level-3,
-            .catalog li>.sub-wrap .catalog-subcatalog.level-3::before,
-            .catalog li>.sub-wrap .catalog-subcatalog.level-3::after {
+            .catalog li > .sub-wrap .catalog-subcatalog.level-3,
+            .catalog li > .sub-wrap .catalog-subcatalog.level-3::before,
+            .catalog li > .sub-wrap .catalog-subcatalog.level-3::after {
                 @include general();
             }
 
-            .catalog:hover>li>a::before {
+            .catalog:hover > li > a::before {
                 box-shadow: none;
             }
 
@@ -120,15 +148,28 @@ body {
             #homepage-review-slider-wrap .reviews-slider {
                 @include general();
             }
+
+            .homepage-reviews {
+                .homepage-review__wrap {
+                    @include general();
+                }
+                .homepage-review__title-link,
+                .homepage-review__counters {
+                    background: none;
+                    border: none;
+                }
+            }
         }
 
         // Darken pictures in the container
 
         .main-slider-wrap,
         .product-info img,
-        .tns-item>a>picture,
+        .tns-item > a > picture,
         .banner img,
-        .post img {
+        .post img,
+        .slider-product-item__image img,
+        .homepage-review__img img {
             @include opacity();
         }
     }
@@ -166,11 +207,11 @@ body {
     }
 
     /*FOOTER*/
-    FOOTER {
+    footer {
         background-color: $bg-color;
         color: $font-color;
 
-        A {
+        a {
             color: $accent-color--light;
         }
     }
@@ -179,8 +220,8 @@ body {
         @include general();
         box-shadow: none;
 
-        >li.ui-autocomplete-group-title,
-        >li.ui-menu-item {
+        > li.ui-autocomplete-group-title,
+        > li.ui-menu-item {
             @include general();
         }
 
