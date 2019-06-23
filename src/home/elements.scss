@@ -1,0 +1,42 @@
+.ui-radio,
+.ui-checkbox {
+    color: $font-color;
+}
+
+.ui-link {
+    color: $accent-color--light;
+}
+.ui-link_blue {
+    color: $accent-color;
+}
+
+.button-ui,
+.button-ui_white,
+.button-ui_brand,
+.button-ui_blue,
+.button-ui.button-ui_passive {
+    @include button-main();
+    background-image: none;
+    &:hover {
+        background-image: none;
+    }
+}
+
+.ui-input-search {
+    color: $font-color;
+    .ui-input-search__input {
+        border: none;
+        @include input();
+        background: $accent-color--dark;
+    }
+}
+.ui-input-search__icon {
+    background: none;
+}
+
+.row-placeholder,
+.row-placeholder_type_header,
+.row-placeholder_single,
+.primary-button-placeholder {
+    background-color: $accent-color--dark;
+}
