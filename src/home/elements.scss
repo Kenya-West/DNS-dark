@@ -14,7 +14,11 @@
 .button-ui_white,
 .button-ui_brand,
 .button-ui_blue,
-.button-ui.button-ui_passive {
+.button-ui.button-ui_passive,
+.one-click-button,
+.buy-button,
+.wishlist-button,
+.remove-button {
     @include button-main();
     background-image: none;
     &:hover {
