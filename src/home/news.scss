@@ -1,0 +1,22 @@
+body {
+    .container {
+        aside {
+        }
+
+        main {
+            .news-comments {
+                .comments-container {
+                    .vote-widget-container .vote-action .vote-positive {
+                        background: none;
+                        border: none;
+                    }
+                    .vote-widget-container .vote-action .vote-positive,
+                    .vote-widget-container .vote-action .vote-negative {
+                        background: none;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
