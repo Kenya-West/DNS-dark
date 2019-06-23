@@ -18,7 +18,18 @@
 .one-click-button,
 .buy-button,
 .wishlist-button,
-.remove-button {
+.remove-button,
+.btn-additional,
+.btn.drop-filters:hover,
+.btn.drop-filters:active,
+.btn.btn-compare:hover,
+.btn.btn-compare:active,
+.btn.btn-wishlist:hover,
+.btn.btn-wishlist:active,
+.btn.btn-trash:hover,
+.btn.btn-trash:active,
+.btn.btn-cart,
+.btn.btn-wishlist-modal-login {
     @include button-main();
     background-image: none;
     &:hover {

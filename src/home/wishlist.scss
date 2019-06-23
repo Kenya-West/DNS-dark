@@ -2,16 +2,30 @@ body {
     .container.userpage {
         @include general();
 
-        .single-wishlist {
-            @include general();
-
-            .body {
-                border: $border;
+        .userpage-menu {
+            .profile-menu-widget__menu-item {
+                color: $accent-color--light;
+                border: none;
+                &:hover {
+                    color: lighten($accent-color--light, 15%);
+                }
             }
         }
 
         .wishlist-info {
             border: $border;
+        }
+        .userpage-content {
+            .single-wishlist {
+                @include general();
+
+                .body {
+                    border: $border;
+                }
+                .wishlist-action-buttons {
+                    @include general();
+                }
+            }
         }
     }
 }
