@@ -1,23 +1,150 @@
 body {
     .container {
-        aside {}
+        aside {
+        }
 
         main {
-            .catalog-products {
+            #catalog-items-page {
                 .price-buttons-catalog .btn-cart {
                     @include button-secondary();
                 }
+
+                .products-page__top-block {
+                    @include general();
+                    .popover-block,
+                    .popover-block_show {
+                        @include general();
+                        .ui-radio__item,
+                        .ui-checkbox {
+                            &:hover {
+                                background-color: $accent-color--dark;
+                            }
+                        }
+                    }
+                    .top-filters__picked .picked-filter__reset-btn_all {
+                        @include button-secondary();
+                    }
+
+                    .offer-representation-in-category .item-block.is-active {
+                        background-color: transparent;
+                    }
+
+                    .offer-representation-in-category .item-block,
+                    .offer-representation-in-category .item-block a:link {
+                        background-color: transparent;
+                        color: $accent-color--light;
+                    }
+
+                    .active-filter .clear-filter {
+                        background-color: $accent-color--dark;
+                        color: $accent-color--light;
+                        border: $border;
+                    }
+                }
+            }
+            .products-page__content {
+                .products-page__left-block {
+                    .ui-collapse__link_list,
+                    .ui-checkbox_list,
+                    .ui-radio__item_list {
+                        &:hover {
+                            background-color: $accent-color--dark;
+                        }
+                    }
+
+                    .ui-collapse__link_left {
+                        color: $accent-color--light;
+                    }
+
+                    .ui-input-search.ui-input-search_catalog-filter,
+                    .ui-input-search__input.ui-input-search__input_catalog-filter {
+                        @include input();
+                    }
+                    .ui-input-search__icon.ui-input-search__icon_catalog-filter {
+                        background: none;
+                    }
+
+                    .products-page__top-block,
+                    .left-filters,
+                    .ui-input-search.ui-input-search_catalog-filter,
+                    .ui-collapse_list {
+                        @include general();
+                        .ui-input-small,
+                        .ui-input-small_list {
+                            @include input();
+                            .ui-input-small__input {
+                                background: none;
+                                color: $font-color;
+                            }
+                        }
+                    }
+                    .left-top-filters-search-input {
+                        background-color: $accent-color--dark;
+                    }
+                }
+                .products-page__list {
+                    .products-list__content {
+                        .catalog-items-list {
+                            .catalog-item .n-catalog-product,
+                            .catalog-item .n-catalog-product__footer {
+                                @include general();
+                            }
+
+                            .catalog-item
+                                .n-catalog-product
+                                .n-catalog-product__info
+                                .product-info__title-link
+                                a:hover {
+                                background-color: transparent;
+                            }
+
+                            .catalog-item
+                                .n-catalog-product
+                                .n-catalog-product__info
+                                .product-info__title-link
+                                a.clamped-link:before,
+                            .product-price__benefits:before {
+                                box-shadow: none;
+                            }
+                            &.view-simple .n-catalog-product .n-catalog-product__info .product-info__title-description {
+                                color: darken($accent-color--light, 15%);
+                            }
+                        }
+                        .pagination-container {
+                            .pagination-widget__show-more-btn,
+                            .pagination-widget__pages {
+                                @include button-secondary();
+                            }
+                            .pagination-widget__page-link_disabled:hover {
+                                background-color: transparent;
+                                border-color: transparent;
+                                color: $accent-color--light;
+                            }
+                            .pagination-widget__page-link:hover {
+                                background-color: $accent-color--dark;
+                                border-color: transparent;
+                                color: $font-color;
+                            }
+                        }
+                    }
+                }
             }
 
-            .catalog-product .product-buttons .btn-one-click {
-                background: $accent-color--dark;
-                color: $accent-color--light;
-                border: 3px solid lighten($accent-color--dark, 10%);
-
-                &:hover {
-                    background: lighten($accent-color--dark, 10%);
-                    color: $font-color;
-                    border: 3px solid lighten($accent-color--dark, 20%);
+            .products-page__helpers {
+            }
+            .viewed-products-slider {
+                .slider-products {
+                    @include general();
+                    .slider-product-item__title .clamped-link {
+                        background: none;
+                    }
+                    .clamped-link:before,
+                    .product-price__benefits:before {
+                        box-shadow: none;
+                    }
+                    .tns-controls button {
+                        background: $accent-color--dark;
+                    }
                 }
             }
 
@@ -29,163 +156,8 @@ body {
                 }
             }
 
-            .filter-side {
-                .filters-container .mobile-crumbs {
-                    @include general();
-                }
-
-                .filter-list {
-                    @include general();
-
-                    .filter-block {
-                        @include general();
-                    }
-
-                    .filter-block>LABEL>A,
-                    .filter-block>LABEL>A,
-                    .filter-block .filter-block-items .checkbox-list input+label {
-                        color: $accent-color--light;
-                    }
-
-                    .radio input[type="radio"]+label span.filter-block-item-name {
-                        color: $accent-color--light;
-                    }
-                }
-            }
-
-            .catalog-filters .filter-controls .filter .filter-block-items:not(.has-collapse-button):before,
-            .catalog-filters .filter-controls .filter-block:not(.filter-block-compatible-products) .filter-block-items:not(.has-collapse-button):before,
-            .catalog-filters .filter-list .filter .filter-block-items:not(.has-collapse-button):before,
-            .catalog-filters .filter-list .filter-block:not(.filter-block-compatible-products) .filter-block-items:not(.has-collapse-button):before,
-            .catalog-filters .filter-controls .filter .filter-block-items:not(.has-collapse-button):after,
-            .catalog-filters .filter-controls .filter-block:not(.filter-block-compatible-products) .filter-block-items:not(.has-collapse-button):after,
-            .catalog-filters .filter-list .filter .filter-block-items:not(.has-collapse-button):after,
-            .catalog-filters .filter-list .filter-block:not(.filter-block-compatible-products) .filter-block-items:not(.has-collapse-button):after {
-                display: none;
-            }
-
-            .filter-list .filter-block .filter-block-items .search-block input[data-role="filter-items-search"] {
-                @include input();
-            }
-
-            .catalog-filters .apply-filters-box {
-                @include general();
-            }
-
-            .btn-additional,
-            .btn.drop-filters:hover,
-            .btn.drop-filters:active,
-            .btn.btn-compare:hover,
-            .btn.btn-compare:active,
-            .btn.btn-wishlist:hover,
-            .btn.btn-wishlist:active,
-            .btn.btn-trash:hover,
-            .btn.btn-trash:active,
-            .btn.btn-cart,
-            .btn.btn-wishlist-modal-login {
-                @include button-main();
-            }
-
-            .btn.drop-filters {
-                @include button-secondary();
-            }
-
-            .desktop-controls-container .sort-filter {
-                @include general();
-            }
-
-            .filter-list {
-                background-color: $bg-color;
-            }
-
-            .offer-representation-in-category .item-block.is-active {
-                background-color: transparent;
-            }
-
-            .offer-representation-in-category .item-block,
-            .offer-representation-in-category .item-block a:link {
-                background-color: transparent;
-                color: $accent-color--light;
-            }
-
-            .active-filter .clear-filter {
-                background-color: $accent-color--dark;
-                color: $accent-color--light;
-                border: $border;
-            }
-
-            .catalog-items-list .item {
-                @include product();
-
-                .title>a>h3 {
-                    color: $font-color;
-                }
-
-                .product-price .price_g>span {
-                    color: $accent-color--light;
-                }
-            }
-
-            #catalog-items-page .catalog-items-more a {
-                color: $font-color;
-
-                &:hover {
-                    background-color: lighten($accent-color--dark, 10%);
-                }
-            }
-
-            .page-products .pagination-container .pagination .item {
-                @include general();
-                background-color: $accent-color--dark;
-
-                &:hover {
-                    background-color: lighten($accent-color--dark, 10%);
-                    border: $border;
-                }
-            }
-
             .page-products .helpers li {
                 background-color: $bg-color;
-            }
-
-            .catalog-products.view-tile.small-tile .product .product-info .title .full-name {
-                background-color: $accent-color--dark;
-            }
-
-            .category-item-desktop {
-                @include general();
-                background: $accent-color--dark;
-
-                .about {
-                    color: $accent-color--light;
-                }
-            }
-
-            .dropdown-menu {
-                @include product();
-
-                >li>a {
-                    color: $accent-color--light;
-
-                    &:focus,
-                    &:hover {
-                        background-color: lighten($accent-color--dark, 10%);
-                    }
-                }
-
-                >.disabled>a,
-                >.disabled>a:focus,
-                >.disabled>a:hover {
-                    color: $font-color;
-                    background-color: lighten($accent-color--dark, 20%);
-                }
-
-                >ul:after,
-                &:after {
-                    border-color: transparent transparent $accent-color--dark !important;
-                }
-
-                border-top: $border !important;
             }
         }
     }
