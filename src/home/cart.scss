@@ -1,55 +1,38 @@
 body {
     .container {
-        aside {}
+        aside {
+        }
 
         main {
-            .tab-controls>a.active {
-                @include general();
-            }
-
-            .tabs .cart-list {
-                @include general();
-
-                .thumbnail {
+            .cart-page-new {
+                .tab-controls__tab_active {
+                    @include product();
+                }
+                .empty-message {
                     @include general();
-
-                    .caption,
-                    .caption a {
-                        color: $accent-color--light
-                    }
-
-                    .count-buttons {
-
-                        button,
-                        >input,
-                        >.btn-plus-block {
-                            background-color: $accent-color--dark;
-                            border: $border;
-
-                        }
-
-                        i {
-                            color: $accent-color--light;
-                        }
-                    }
-
-                    .price .price_g {
-                        color: $accent-color--light;
-                    }
+                }
+                .cart-list {
+                    @include general();
+                }
+                .cart-list__products,
+                .cart-list__product,
+                .total-amount {
+                    border: none;
+                }
+                .cart-list__products:after {
+                    border: none;
                 }
             }
-
-            .cart-list .products:after,
-            .cart-page .tab-controls>a.active:after {
-                border: 2px solid $accent-color--dark;
-            }
-
-            .cart-list .price-total-amount .btn-order {
-                @include button-main;
-            }
-
-            .cart-list .price-total-amount .one-click-checkout-wrap>a {
-                @include button-secondary;
+            .cart-catalog-product-related-widget {
+                .related-tabs .related-tab {
+                    @include general();
+                }
+                .related-tab-controls a {
+                    @include general();
+                }
+                .related-tabs {
+                    border: none;
+                }
             }
         }
     }
